@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ADVANCED (EXERCISE 1)</title>
+
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h1 {
+            border-bottom: 2px solid rgba(199, 83, 228, 0);
+            padding-bottom: 10px;
+        }
+
+        .input-section,
+        .controls-section {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        select {
+            padding: 3px;
+        }
+
+        button {
+            margin-right: 5px;
+            padding: 3px 8px;
+            cursor: pointer;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        .even {
+            color: purple;
+            font-weight: bold;
+        }
+
+        .odd {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .results-section {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .results-section div {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Javascript Web Output #1</h1>
+    <div class="input-section">
+        <label for="numInput">Insert any Positive Numbers:</label>
+        <input type="text" id="numInput">
+
+        <br><br>
+        <button onclick="insertNumber()">Insert</button>
+        <button onclick="clearEntry()">Clear Entry</button>
+    </div>
+
+    <hr>
+    <h3>Inserted Numbers</h3>
+
+    <table id="numberTable">
+        <tbody id="itemList"></tbody>
+    </table>
+
+    <div class="controls-section">
+        <button onclick="clearItems()">Clear Items</button>
+        <button onclick="getTotal()">Get Total</button>
+        <button onclick="getHighestLowest()">Identify Highest to Lowest Numbers</button>
+
+        <label for="sortSelect">Sort By:</label>
+        <select id="sortSelect" onchange="sortItems(this.value)">
+            <option value="" disabled selected>Please select</option>
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+        </select>
+
+    </div>
+
+    <div class="results-section" id="results"></div>
+    <script src="script.js"></script>
+</body>
+</html>
